@@ -15,7 +15,7 @@ class CreateMatchesTable extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
+            $table->string('date');
             $table->time('time');
             $table->string('status');
             $table->bigInteger('week_id')->unsigned();

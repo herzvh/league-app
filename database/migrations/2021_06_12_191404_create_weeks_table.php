@@ -16,6 +16,8 @@ class CreateWeeksTable extends Migration
         Schema::create('weeks', function (Blueprint $table) {
             $table->id();
             $table->integer('number');
+            $table->bigInteger('tournament_id')->unsigned();
+            $table->foreign('tournament_id')->references('id')->on('tournaments')->onDelete('cascade');
             $table->timestamps();
         });
     }

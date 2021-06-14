@@ -9,5 +9,5 @@ class Match extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['date', 'time', 'status'];
+    protected $fillable = ['id', 'date', 'time', 'status'];
 }

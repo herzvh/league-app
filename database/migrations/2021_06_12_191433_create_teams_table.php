@@ -22,6 +22,7 @@ class CreateTeamsTable extends Migration
             $table->integer('m_drawn')->unsigned()->default(0);
             $table->integer('goals')->unsigned()->default(0);
             $table->integer('goal_diff')->unsigned()->default(0);
+            $table->integer('points')->unsigned()->default(0);
             $table->timestamps();
         });
     }

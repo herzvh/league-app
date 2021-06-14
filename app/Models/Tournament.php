@@ -9,5 +9,13 @@ class Tournament extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['league', 'season', 'is_current'];
+    protected $fillable = ['id', 'league', 'season', 'is_current'];
+
+    /**
+     * Get the weeks for the tournament.
+     */
+    public function weeks()
+    {
+        return $this->hasMany(Week::class);
+    }
 }

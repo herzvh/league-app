@@ -9,5 +9,13 @@ class Week extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['number'];
+    protected $fillable = ['tournament_id','number'];
+
+    /**
+     * Get the tournament that owns the week.
+     */
+    public function tournament()
+    {
+        return $this->belongsTo(Tournament::class);
+    }
 }
